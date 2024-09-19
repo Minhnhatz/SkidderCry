@@ -174,7 +174,7 @@ if type(getgenv().Configs) ~= "table" then
 
 			-- Raids
 
-			["SelectRateFruitRaid"] = 1000000,Doesn’t Edit Pls
+			["SelectRateFruitRaid"] = 1000000,--Doesn’t Edit Pls
 			["LimitFragmentsRaids"] = 100000,
 		},
 		["FruitsSettings"] = {
@@ -1784,19 +1784,16 @@ sitinklib:Notify({
         })
 end
 })
-
 local MainTab = sitinkgui:MakeTab("Main")
 
 local Section1 = MainTab:Section({
 	["Title"] = "Main Farm",
 	["Content"] =  "Main Farm Tab"
 })
-
 local StatusFarm = Section1:Paragraph({
     ["Title"] = "Status Farm",
     ["Content"] = "Fumo Hub"
 })
-
 local doi_sivi = Section1:Button({
     ["Title"] = "Hop Server",
     ["Content"] = "",
@@ -1815,7 +1812,6 @@ local joib_id = Section1:TextInput({
         game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,getgenv().JobId, game.Players.LocalPlayer)
     end
 })
-
 local copy_id = Section1:Button({
     ["Title"] = "Copy Job Id",
     ["Content"] = "",
@@ -1823,9 +1819,6 @@ local copy_id = Section1:Button({
         setclipboard(tostring(game.JobId))
     end
 })
-
-
-
 function havemob(name)
 	return game.Workspace.Enemies:FindFirstChild(name) or game.ReplicatedStorage:FindFirstChild(name)
 end
